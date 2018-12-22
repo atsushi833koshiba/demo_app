@@ -2,5 +2,27 @@
 
 {% block content %}
 
-<h2>ローン審査アプリ</h2>
+<div class="row">
+  <div class="col s2">
+  </div>
+  <div class="col s8" style="text-align: center;">
+    <h5>顧客をリストに新規登録するか、過去の顧客を確認するか選んでください</h5>
+  </div>
+  <div class="col s2">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s2">
+  </div>
+  <div class="col s8" style="text-align: center;">
+    <a href="/input_form"><button type="button" name="input"  class="btn btn-default" style="margin-right: 30px;">新規顧客をリストに追加する。</button></a>
+    <a href="/history"><button type="button" name="history" class="btn btn-default"style="margin-right: 30px;" >顧客リストを確認する。</button></a>
+    <a href="/info"><button type="button" name="info"  class="btn btn-default" >顧客デモグラフを表示する。</button></a>
+  </div>
+  <div class="col s2">
+  </div>
+</div>
+
+
 {% endblock %}

@@ -2,8 +2,14 @@
 
 {% block content %}
 
-<h1>履歴一覧</h1>
-
+<div class="row">
+  <div class="col s3">
+    <h1>履歴一覧</h1>
+  </div>
+  <div class="col s5">
+    <a href="/info"><button type="button" class="btn btn-default" name="history" style="margin-top:10%;">顧客デモグラフィックを確認する。</button></a>
+  </div>
+</div>
 
 <div class="row">
   <div class="col s11">
@@ -22,7 +28,7 @@
           <td>{{customer.proba|floatformat:2}}</td>
           <td>{{customer.comment}}</td>
           <td><form class="delete" method="post">{% csrf_token %}
-            <button type="submit" name="d_id" value={{customer.id}}>削除</button></form>
+            <button type="submit" name="d_id" value={{customer.id}} class="btn btn-default">削除</button></form>
           </td>
         </tr>
       {% endfor %}
