@@ -5,7 +5,8 @@ from sklearn.externals import joblib
 import numpy as np
 
 # モデルの読み込みはグローバルで宣言しておく。まいかい読み込まないように。
-loaded_model = joblib.load('demo_app/demo_model.pkl')
+anywhere = '/home/koshiba/koshiba.pythonanywhere.com'
+loaded_model = joblib.load(anywhere + '/demo_app/demo_model.pkl')
 
 # Create your views here.
 def index(request):
