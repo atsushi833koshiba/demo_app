@@ -58,19 +58,17 @@ class Customers(models.Model):
     comment = models.CharField(max_length=200, blank=True, null=True)
     registered_date = models.DateField(default=date.today)
 
-
     def register(self):
         self.registered_date = date.today()
         self.save()
 
     def __str__(self):
-
         if self.proba == 0.0:
             return '%s, %d, %s' % (self.registered_date.strftime('%Y-%m-%d'),\
                                 self.id,\
                                 self.last_name + self.first_name)
         else:
-            return '%s, %d, %s, %d, %s, %s' % (self.registered_date.strtime('%Y-%m-%d'),\
+            return '%s, %d, %s, %d, %s, %s' % (self.registered_date.strftime('%Y-%m-%d'),\
                                 self.id,\
                                 self.last_name + self.first_name,\
                                 self.result,\
