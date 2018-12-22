@@ -9,8 +9,8 @@ import json
 import pandas as pd
 
 # モデルの読み込みはグローバルで宣言しておく。まいかい読み込まないように。
-#anywhere = '/home/koshiba/koshiba.pythonanywhere.com/'
-loaded_model = joblib.load('demo_app/demo_model.pkl')
+anywhere = '/home/koshiba/koshiba.pythonanywhere.com/'
+loaded_model = joblib.load(anywhere + 'demo_app/demo_model.pkl')
 
 # Create your views here.
 @login_required
